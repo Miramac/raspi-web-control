@@ -1,0 +1,28 @@
+extends layout
+
+block content
+    .container(ng-app='myExpress')
+        .jumbotron
+            h1= title
+            p Welcome to #{title}
+        #test TEST
+        hr
+        div(ng-controller='GpioCtrl') 
+            table.table
+                thead
+                    tr
+                        th GPIO
+                        th  State
+                tbody
+                    tr
+                        td GPIO1
+                        td
+                            input#gpio1.gpip-switch(type='checkbox',  ng-model='gpio.gpio1', ng-change='changeHandler(1, {{gpio.gpio1}})')
+                    tr
+                        td GPIO2
+                        td
+                            input#gpio2.gpip-switch(type='checkbox', ng-model='gpio.gpio2', ng-change='changeHandler(2)')
+                    tr
+                        td GPIO3
+                        td
+                            input#gpio3.gpip-switch(type='checkbox', ng-model='gpio.gpio3', ng-change='changeHandler(3)')
