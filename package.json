@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "watch": "start watchify client/main.js -o public/scripts/bundle.js -v & start nodemon ./bin/www",
+    "watch": "watchify client/main.js -o public/scripts/bundle.js -v & nodemon ./bin/www",
+    "watch-win": "start watchify client/main.js -o public/scripts/bundle.js -v & start nodemon ./bin/www",
     "build": "browserify client/main.js -o public/scripts/bundle.js",
     "start": "nodemon ./bin/www"
   },
